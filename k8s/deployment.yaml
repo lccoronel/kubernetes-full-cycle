@@ -16,5 +16,5 @@ spec:
     spec:
       containers:
       - name: goserver
-        image: lccoornel/hello-go:latest
+        image: lccoornel/hello-go:v1
     

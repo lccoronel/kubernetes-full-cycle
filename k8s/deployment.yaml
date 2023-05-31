@@ -16,5 +16,10 @@ spec:
     spec:
       containers:
       - name: goserver
-        image: lccoornel/hello-go:v1
+        image: lccoornel/hello-go:v2
+        env:
+          - name: NAME
+            value: "Lucas"
+          - name: AGE
+            value: "26"
     

@@ -16,10 +16,14 @@ spec:
     spec:
       containers:
       - name: goserver
-        image: lccoornel/hello-go:v2
+        image: lccoornel/hello-go:v5
         envFrom:
           - configMapRef:
               name: goserver-env
+        
+        volumeMounts:
+          - mountPath: "/go/myfamily"
+            name: config
         # env:
         #   - name: NAME
         #     valueFrom:
@@ -32,4 +36,11 @@ spec:
         #       configMapKeyRef:
         #         name: goserver-env
         #         key: AGE
+      volumes:
+        - name: config
+          configMap:
+            name: configmap-family
+            items: 
+            - key: members
+              path: "family.txt"
     

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: goserver
-        image: lccoornel/hello-go:v5.5
+        image: lccoornel/hello-go:v9.6
         resources:
           requests: 
             cpu: 100m
